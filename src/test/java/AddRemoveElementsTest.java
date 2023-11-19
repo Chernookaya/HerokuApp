@@ -16,11 +16,10 @@ public class AddRemoveElementsTest {
 
     @BeforeMethod
     public void setup() {
-        WebDriverManager.chromedriver().setup(); //Сравнивает текущую версия браузера с драйвером
-        //и в случае чего выкачивает нужную
-        ChromeOptions options = new ChromeOptions(); //задает хромОпции
+        WebDriverManager.chromedriver().setup(); 
+        ChromeOptions options = new ChromeOptions(); 
         options.addArguments("start-maximized");
-        driver = new ChromeDriver(options); //создаю объект драйвера и передаю хромопции
+        driver = new ChromeDriver(options); 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
